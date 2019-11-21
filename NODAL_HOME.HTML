@@ -16,6 +16,11 @@
        body{
         background: linear-gradient(to bottom, #4CA1AF, #2C3E50) fixed;
        }
+       .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
      
       ul {
         
@@ -52,7 +57,7 @@
                 .vertical-menu a {
                   
                  border: 3px solid #333;
-                color: white;
+                  color: white;
                   display: block;
                   padding: 12px;
                   text-decoration: none;
@@ -62,11 +67,18 @@
                     background-color: rgb(36, 35, 35);
                     border: 3px solid rgb(36, 35, 35);
                 }
-                
                 div{
-                    margin-top: 50px;
-                    margin-left: 20px;
-                    height: 500px;
+                 
+                  float: left;
+                }
+                
+                span{
+                  padding-top: 100px;
+                  padding-bottom: 10px;
+                    margin-left: 50px;
+                    float: left;
+                    height: 600px;
+                    border:  3px solid rgb(36, 35, 35);
                 }
                 .column1 {
                 border: 1px solid black;
@@ -76,12 +88,35 @@
                 font-weight: bold;
                 height: 400px; 
                 }
+                #button{
+        background-color: #333;
+        border: 3px solid #333;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        float: center;
+      }
+      #logo{
+        padding:15px;
+        margin-left:300px;
+        margin-right:350px;
+      }
+        #button:hover{
+        background-color: rgb(36, 35, 35);
+        border: 3px solid rgb(36, 35, 35);
+      }
                 
                 </style>
                 </head>
                 <body>
-                    <H1> National Scholarship Portal </H1>
-                    <h4>Government of India</h4>
+                    <div id=logo>
+                        <img src="govt_logo.jpg" width="100" height="100" align="left">
+                       
+                      
+                        <H1> National Scholarship Portal </H1>
+                        <h4>Government of India</h4>
+                      </div>
+                      
                     <ul>
                     <table cellspacing="10" align="center" >
                         <tr>
@@ -93,13 +128,30 @@
                     </table>
                     </ul>
                     <br><br>
-                    <div class="vertical-menu" >
-                  <a href="View">View list of Institutes Registered</a>
-                  <a href="View">View Student Application Form</a>
-                  <a href="View">Verify Institute Request</a></div>
-                  <div class="column1" >
-                      <iframe height="50px" width="100%" src="" name="iframe_latest_news"></iframe>
-                  </div>
+                    <div class="row">
+                    
+                           <div class="vertical-menu" >
+                              <a href="View">View list of Institutes Registered</a>
+                              <a href="View">View Student Application Form</a>
+                              <a href="View">Verify Institute Request</a></div>
+                              <span><iframe height="500px" width="700px" src="" name="iframe_latest_news"></iframe>
+                                <table cellspacing="10" align="center">
+                                    <tr>
+                                    <td colspan="2">
+                                      <input type="submit" id="button" onclick="" value="Grant" name="button">
+                                    </tr>
+                                    <tr>
+                                    <td colspan="2">
+                                      <input type="submit" id="button" onclick="" value="Reject"name="button" >
+                                    </tr>
+                                    </table>
+                            </span>
+
+                        
+
+                     
+                  
+                        
                  
 </body>
 </html>
